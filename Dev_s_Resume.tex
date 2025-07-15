@@ -1,8 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Jake Gutierrez
-% Based off of: https://github.com/sb2nov/resume
-% License : MIT
+% Author : Dev Patel
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -14,32 +12,21 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black]{hyperref}  % Changed to show colored links
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{textcomp}
+\usepackage{fontawesome}
 \input{glyphtounicode}
-\usepackage{textcomp} % For rupee symbol
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
 
 \pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\fancyhf{}
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Adjust margins
+% Margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
@@ -47,156 +34,162 @@
 \addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
 \newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & #2 \\
+  \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
-
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
 \begin{center}
-    \textbf{\Huge \scshape Dev Patel} \\ \vspace{1pt}
-    \small +91 9974650993 $|$ dev.kce22@sot.pdpu.ac.in $|$ 
-    \href[urlcolor=black]{https://linkedin.com/in/deevvv25}{\underline{linkedin.com/in/deevvv25}} $|$
-    \href[urlcolor=black]{https://github.com/dev-eloper-365}{\underline{github.com/dev-eloper-365}}
+  \textbf{\Huge \scshape Dev Patel} \\
+  \small 
+  \faPhone\ \href{tel:+919974650993}{\textcolor{black}{+91 9974650993}} $|$
+  \faEnvelope\ \href{mailto:dev.kce22@sot.pdpu.ac.in}{\textcolor{black}{dev.kce22@sot.pdpu.ac.in}} $|$
+  \href{https://linkedin.com/in/deevvv25}{\textcolor{black}{\faLinkedin\ linkedin.com/in/deevvv25}} $|$
+  \href{https://github.com/dev-eloper-365}{\textcolor{black}{\faGithub\ github.com/dev-eloper-365}}
 \end{center}
+
+
 
 
 %-----------EDUCATION-----------
 \section{Education}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
     \resumeSubheading
-      {Pandit Deendayal Energy University}{Gandhinagar, India}
-      {Bachelor of Technology in Computer Science}{Oct. 2022 – Present}
-  \resumeSubHeadingListEnd
+      {Pandit Deendayal Energy University, Gandhinagar}
+      {2022–26}
+      {Bachelor of Technology in Computer Science}
+      {CGPA: 8.02}
+\resumeSubHeadingListEnd
 
+%-----------ACHIEVEMENTS-----------
+\section{Achievements}
+\resumeSubHeadingListStart
+  \resumeItemListStart
+    \resumeItem{GUJCET Percentile Rank: \textbf{91.85}}
+    \resumeItem{Smart India Hackathon 2024: \textbf{Shortlisted at the College Level} for Project Sudarshan}
+    \resumeItem{DAIICT TicTechToe Hackathon: Secured \textbf{4th position} for the TripEase project among 100+ teams}
+    \resumeItem{Proposed funding under \textbf{SRP} for an \textbf{AI-based License Plate Recognition system} integrated with \textbf{Blockchain-enabled Smart Parking Management}, guided by \textbf{Dr. Hiren Thakkar} (PDEU)}
+  \resumeItemListEnd
+
+  \vspace{-8pt}\resumeItemListStart
+  \resumeItem{\textbf{Competitive Programming:}}
+  \vspace{-6pt}
+  \begin{itemize}[leftmargin=0.3in]
+    \item[]
+      \begin{tabularx}{\textwidth}{X X}
+        $\bullet$ \textbf{LeetCode:} Solved \textbf{200+} problems &
+        $\bullet$ \textbf{Codeforces:} Solved \textbf{25+} problems \\
+        $\bullet$ \textbf{CSES:} Solved \textbf{20+} problems &
+        $\bullet$ \textbf{CodeChef:} Solved \textbf{15+} problems
+      \end{tabularx}
+  \end{itemize}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \item{
+    \small{
+      \textbf{Languages:} Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS \\
+      \textbf{Frameworks:} React, Node.js, Express.js, FastAPI, Angular, MongoDB, MySQL, Hadoop \\
+      \textbf{DevOps:} Git, Docker, VS Code, PyCharm, IntelliJ, Eclipse, Vercel, Railway, GCP, Azure  \\
+      % \textbf{Deployment:} \\
+      % \textbf{Databases \& Big Data:} MySQL, Hadoop \\
+      \textbf{Computer Fundamentals:} DSA, DBMS, OOPs, Operating Systems, Computer Networks
+    }
+  }
+\end{itemize}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {\href{https://github.com/dev-eloper-365/BillSwift}{BillSwift - MERN Application Developer}}{Jan 2024 -- Present}
-      {Pandit Deendayal Energy University}{Gandhinagar, India}
-      \resumeItemListStart
-        \resumeItem{Developed a full-stack MERN application for small vendors to manage billing and inventory with real-time updates}
-        \resumeItem{This project is being developed under the guidance of Dr. Hiren Thakkar, PDEU faculty, driven by personal interest}
-        \resumeItem{Built secure RESTful APIs with Node.js and Express.js; implemented JWT authentication for protected routes}
-        \resumeItem{Integrated WhatsApp API to send invoices directly to users for improved customer communication}
-      \resumeItemListEnd
-      
-    \resumeSubheading
-      {\href{https://www.instagram.com/vayu_app}{Social Media Manager / Content Creator}}{Sept 2024 -- Present}
-      {Vayu, Cab Booking Startup}{Remote}
-      \resumeItemListStart
-        \resumeItem{Strategized, scripted, and voiced offer reels with 400K+ views on Instagram and Meta}
-        \resumeItem{Grew Vayu's page from 0 to 2.4K followers in 6 months}
-        \resumeItem{Generated 8M+ impressions on Meta with a spend of 1.74 lakh Rs only}
-        \resumeItem{Reached 510k accounts, engaged 490k, grew followers to 1.6k (+5.4\%) this month only}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {BillSwift – Software Developer}{Jan 2024 -- Present}
+    {Guided by Dr. Hiren Thakkar, PDEU}{Gandhinagar, India}
+    \resumeItemListStart
+      \resumeItem{Developed a full-stack MERN application for \textbf{Small vendors to Manage Billing and Inventory} with real-time updates}
+      \resumeItem{Conducted market research on leading invoicing platforms and designed a clean, \textbf{User-centric UI} from scratch to enhance usability}
+      \resumeItem{Built secure RESTful APIs with Node.js and Express.js; implemented JWT authentication for protected routes}
+      \resumeItem{Integrated \textbf{Third-Party WhatsApp Web API} to send automated invoices directly to users for improved customer communication}
+    \resumeItemListEnd
 
+  \resumeSubheading
+    {The Special Character – Software Developer}{May 2025 -- July 2025}
+    {Offline}{}
+    \resumeItemListStart
+      \resumeItem{Conceptualized and Designed Architecture for \textbf{SportsWalla, a BoxCricket or Venue booking platform}}
+\resumeItem{Learned how modern e-commerce sites are built using \textbf{Next.js} for dynamic frontend, \textbf{Medusa} for backend commerce logic, and \textbf{Payload CMS} for managing product and content data in a headless architecture}
+
+      \resumeItem{Developed admin dashboards, secure payment flows, and scalable backend infrastructure}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-    {\textbf{\href{https://github.com/4ryaS/sudarshan-sih-2024}{Sudarshan}} $|$ \emph{React.js, Node.js, Express.js, MongoDB, Python, Blockchain, IPFS}}{}
-    \resumeItemListStart
-      \resumeItem{Developed a blockchain-integrated system for Aadhaar card verification using OCR, template matching, and the Verhoeff algorithm for detail validation}
-      \resumeItem{Built a secure React.js web portal enabling authorized personnel to cross-verify Aadhaar data against blockchain entries in real-time}
-      \resumeItem{Integrated IPFS for decentralized Aadhaar image storage and Python scripts to handle blockchain-based verification logic}
-      \resumeItem{Project was shortlisted in the Smart India Hackathon 2024 college evaluation round}
-    \resumeItemListEnd
+\resumeSubHeadingListStart
 
-    \resumeProjectHeading
-    {\textbf{\href{https://github.com/dev-eloper-365/TripEase}{TripEase}} [\href{https://trip-ease-git-master-dev-eloper-365s-projects.vercel.app/}{Live Site}] $|$ \emph{React.js, Node.js, Express.js, MongoDB, JWT, Groq API}}{}
-    \resumeItemListStart
-      \resumeItem{Engineered a full-stack MERN application enabling users to plan, create, and manage personalized travel itinerary}
-      \resumeItem{Secured 4th position in DAIICT TicTechToe Hackathon for innovative travel planning solution}
-      \resumeItem{Built RESTful APIs with Node.js and Express.js; implemented secure JWT authentication and protected API routes}
-      \resumeItem{Integrated Groq API to provide AI-powered travel recommendations and smart itinerary suggestions}
-    \resumeItemListEnd
+  \resumeProjectHeading
+  {\textbf{\href{https://github.com/4ryaS/sudarshan-sih-2024}{Sudarshan}} $|$ React.js, Node.js, Express.js, MongoDB, Python, Blockchain, IPFS}{}
+  \resumeItemListStart
+    \resumeItem{Blockchain-integrated Aadhaar verification with OCR (Optical Character Recognition), template matching, and Verhoeff algorithm}
+    \resumeItem{Built secure React.js portal to cross-verify Aadhaar data against blockchain entries}
+    \resumeItem{Integrated IPFS for decentralized image storage; used Python for backend verification logic}
+    \resumeItem{Shortlisted in Smart India Hackathon 2024 (college round)}
+  \resumeItemListEnd
 
-    \resumeProjectHeading
-    {\textbf{\href{https://github.com/dev-eloper-365/ParkEase}{ParkEase}} [\href{https://park-ease0.vercel.app/}{Live Site}] $|$ \emph{React.js, Node.js, Express.js, MongoDB, JWT, Plate Recognition API}}{}
-    \resumeItemListStart
-      \resumeItem{Developed a smart parking management system with real-time dashboards for monitoring occupancy, vehicle entry/exit, and parking trends}
-      \resumeItem{Integrated an AI-based License Plate Recognition API to auto-detect incoming vehicles and dynamically update parking records}
-      \resumeItem{Built secure RESTful APIs with Node.js and Express.js; implemented role-based authentication (admin, user) using JWT}
-      \resumeItem{Designed responsive admin and user dashboards using React.js and Chart.js for intuitive parking booking and management workflows}
-    \resumeItemListEnd
-    \resumeSubHeadingListEnd
+  \resumeProjectHeading
+  {\textbf{\href{https://github.com/dev-eloper-365/TripEase}{TripEase}} \textbar{}
+   \href{https://trip-ease-git-master-dev-eloper-365s-projects.vercel.app/}{Live Site} $|$ MERN, JWT, Groq API}{}
+  \resumeItemListStart
+    \resumeItem{Full-stack app for planning and managing travel itineraries}
+    \resumeItem{Secured 4th place in DAIICT TicTechToe Hackathon}
+    \resumeItem{Integrated Groq API for smart itinerary suggestions}
+  \resumeItemListEnd
 
+  \resumeProjectHeading
+  {\textbf{\href{https://github.com/dev-eloper-365/ParkEase}{ParkEase}} \textbar{}
+   \href{https://park-ease0.vercel.app/}{Live Site} $|$ MERN, JWT, Plate Recognition API}{}
+  \resumeItemListStart
+    \resumeItem{Built a smart parking system with real-time vehicle tracking and dashboards}
+    \resumeItem{Integrated AI-based License Plate Recognition for vehicle entry/exit automation}
+    \resumeItem{Designed role-based access and analytics with React.js and Chart.js}
+  \resumeItemListEnd
 
-
-%
-%-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Express.js, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse, Vercel, Railway} \\
-     \textbf{Deployment}{: Vercel (Frontend), Railway (Backend/API)}
-    }}
- \end{itemize}
+\resumeSubHeadingListEnd
 
 
 %-------------------------------------------
