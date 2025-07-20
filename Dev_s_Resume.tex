@@ -1,6 +1,8 @@
 %-------------------------
 % Resume in Latex
-% Author : Dev Patel
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -12,56 +14,103 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[colorlinks=true,urlcolor=blue,linkcolor=black]{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{textcomp}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{xcolor}
 \usepackage{fontawesome}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-% Margins
-\addtolength{\oddsidemargin}{-0.5in}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
+
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+% Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
+% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-2pt}}}
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-  \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & #2 \\
-    \textit{\small#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-7pt}
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
 }
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeProjectHeading}[2]{
-  \item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \small#1 & #2 \\
-  \end{tabular*}\vspace{-7pt}
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
 }
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -71,8 +120,8 @@
 \begin{center}
   \textbf{\Huge \scshape Dev Patel} \\
   \small 
-  \faPhone\ \href{tel:+919974650993}{\textcolor{black}{+91 9974650993}} $|$
-  \faEnvelope\ \href{mailto:dev.kce22@sot.pdpu.ac.in}{\textcolor{black}{dev.kce22@sot.pdpu.ac.in}} $|$
+  \href{tel:+919974650993}{\textcolor{black}\faPhone\ {+91 9974650993}} $|$
+  \href{mailto:dev.kce22@sot.pdpu.ac.in}{\textcolor{black}{\faEnvelope\ dev.kce22@sot.pdpu.ac.in}} $|$
   \href{https://linkedin.com/in/deevvv25}{\textcolor{black}{\faLinkedin\ linkedin.com/in/deevvv25}} $|$
   \href{https://github.com/dev-eloper-365}{\textcolor{black}{\faGithub\ github.com/dev-eloper-365}}
 \end{center}
@@ -81,113 +130,137 @@
 
 
 %-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
     \resumeSubheading
-      {Pandit Deendayal Energy University, Gandhinagar}
-      {2022–26}
-      {Bachelor of Technology in Computer Science}
-      {CGPA: 8.02}
-\resumeSubHeadingListEnd
+      {Pandit Deendayal Energy University}{2022 -- Expected May 2026}
+      {Bachelor of Technology in Computer Engineering | CGPA : 8.02}{Gandhinagar, Gujarat}
+      \resumeItemListStart
+     \resumeItem{Related Coursework: Data Structure \& Algorithms, Cloud Computing, Software Development, Database Management, Computer Network, Distributed Systems, Artificial Intelligence}
+         \resumeItemListEnd
+  \resumeSubHeadingListEnd
+  \vspace{-16pt}
 
 %-----------ACHIEVEMENTS-----------
-\section{Achievements}
+\section{\textbf{Achievements}}
 \resumeSubHeadingListStart
   \resumeItemListStart
-    \resumeItem{GUJCET Percentile Rank: \textbf{91.85}}
-    \resumeItem{Smart India Hackathon 2024: \textbf{Shortlisted at the College Level} for Project Sudarshan}
-    \resumeItem{DAIICT TicTechToe Hackathon: Secured \textbf{4th position} for the TripEase project among 100+ teams}
-    \resumeItem{Proposed funding under \textbf{SRP} for an \textbf{AI-based License Plate Recognition system} integrated with \textbf{Blockchain-enabled Smart Parking Management}, guided by \textbf{Dr. Hiren Thakkar} (PDEU)}
-  \resumeItemListEnd
+\vspace{-3pt}
+  \resumeItem{\textbf{Secured a GUJCET Percentile Rank of 91.85}, demonstrating strong performance and proficiency in core subjects}
 
-  \vspace{-8pt}\resumeItemListStart
+  \resumeItem{\textbf{Project Sudarshan shortlisted at the College Level} for Smart India Hackathon (SIH 2024), 
+  \href{https://drive.usercontent.google.com/download?id=1wTAfgS5TMOPHQgIEbATFiR-whlNGGKKr&authuser=0}{\textcolor{blue}{PSID:1668}}}
+
+  \resumeItem{\textbf{Won DAIICT TicTechToe Hackathon, 4th position} for the TripEase project among 100+ teams – 
+  \href{https://drive.usercontent.google.com/download?id=1gpPzx0RkWLiSWMb5AeOI44F1wd5U-5zU&authuser=0}{\textcolor{blue}{Certificate}}}
+
+  \resumeItem{\textbf{Proposed funding under SRP (Student Research Program PDEU)} for an AI-based License Plate Recognition system integrated with Blockchain-based Smart Parking Management, guided by \textbf{Dr. Hiren Thakkar (PDEU)} -- {\textcolor{blue}{\href{LOR Link}{LOR}}}
+}
+  
+  \resumeItemListEnd
+  \vspace{-20pt}
+  \resumeItemListStart
   \resumeItem{\textbf{Competitive Programming:}}
   \vspace{-6pt}
   \begin{itemize}[leftmargin=0.3in]
     \item[]
       \begin{tabularx}{\textwidth}{X X}
-        $\bullet$ \textbf{LeetCode:} Solved \textbf{200+} problems &
-        $\bullet$ \textbf{Codeforces:} Solved \textbf{25+} problems \\
-        $\bullet$ \textbf{CSES:} Solved \textbf{20+} problems &
-        $\bullet$ \textbf{CodeChef:} Solved \textbf{15+} problems
+        $\bullet$ \textbf{LeetCode: Solved 200+ problems }&
+        $\bullet$ \textbf{CodeChef: Solved 60+ problems } \\
+        $\bullet$ \textbf{Codeforces: Solved 10+ problems } & 
+        $\bullet$ \textbf{CSES: Solved 10+ problems } 
       \end{tabularx}
   \end{itemize}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
+  \vspace{-16pt}
 
 
 
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-  \item{
-    \small{
-      \textbf{Languages:} Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS \\
-      \textbf{Frameworks:} React, Node.js, Express.js, FastAPI, Angular, MongoDB, MySQL, Hadoop \\
-      \textbf{DevOps:} Git, Docker, VS Code, PyCharm, IntelliJ, Eclipse, Vercel, Railway, GCP, Azure  \\
-      % \textbf{Deployment:} \\
-      % \textbf{Databases \& Big Data:} MySQL, Hadoop \\
-      \textbf{Computer Fundamentals:} DSA, DBMS, OOPs, Operating Systems, Computer Networks
-    }
-  }
-\end{itemize}
+%-----------TECHNICAL SKILLS-----------%
+\section{\textbf{Technical Skills}}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+ \vspace{-1pt}
+    \small{\item{
+     \textbf{Languages}{: \textbf{\underline{\textit{Proficient}}}: JavaScript, Java, C++ (STL) \textbf{\underline{\textit{Intermediate}}}: Python,  SQL, CSS \textbf{\underline{\textit{Beginner}}}: PHP, NoSQL} \\
+     \vspace{0.5mm}
+     \textbf{Frameworks}{:  Node.js, Express.js, Next.js, FastAPI, Spring Framework, Spring MVC} \\
+     \vspace{0.5mm}
+      \textbf{Databases \& Libraries}{: MongoDB, MySQL, PostgreSQL, React.js, Angular, Bootstrap, Tailwind} \\
+     \vspace{0.5mm}
+     \textbf{Tools \& Platform}{: Google Cloud, Microsoft Azure, Linux, Vercel, Railway, Figma, GitHub, Windows  } \\
+     
+    }}
+ \end{itemize}
+ \vspace{-16pt}
 
 %-----------EXPERIENCE-----------
-\section{Experience}
+\section{\textbf{Experience}}
 \resumeSubHeadingListStart
   \resumeSubheading
     {BillSwift – Software Developer}{Jan 2024 -- Present}
-    {Guided by Dr. Hiren Thakkar, PDEU}{Gandhinagar, India}
+    {Guided by Dr. Hiren Thakkar, PDEU -- {\href{https://bill-swift-gilt.vercel.app/}{\textcolor{blue}{\textbf{Project Demo}}} \textbf{--} \href{https://github.com/dev-eloper-365/BillSwift/}{\textcolor{blue}{\textbf{Source Code}}}}
+    }{Gandhinagar, India}
     \resumeItemListStart
-      \resumeItem{Developed a full-stack MERN application for \textbf{Small vendors to Manage Billing and Inventory} with real-time updates}
-      \resumeItem{Conducted market research on leading invoicing platforms and designed a clean, \textbf{User-centric UI} from scratch to enhance usability}
-      \resumeItem{Built secure RESTful APIs with Node.js and Express.js; implemented JWT authentication for protected routes}
-      \resumeItem{Integrated \textbf{Third-Party WhatsApp Web API} to send automated invoices directly to users for improved customer communication}
+      \resumeItem{Developed a full-stack MERN application for \textbf{Small Vendors to Seamlessly Manage Billing and Inventory}, with automated invoice generation and real-time multi-platform delivery via WhatsApp, SMS, and other platforms}
+      % \resumeItem{Conducted market research on leading invoicing platforms and designed a clean, \textbf{User-centric UI} from scratch to}
+      \resumeItem{Built \textbf{secure RESTful APIs with Node.js \& Express.js; implemented JWT} authentication for protected routes}
+\resumeItem{Integrated an \textbf{open-source WhatsApp Web API} to dispatch auto-generated invoices in real time, eliminating dependency on Meta's paid API and reducing costs of \textbf{\$0.009 per message} — a low-cost solution for small enterprises}
+
+\resumeItem{Configured \textbf{CI/CD pipeline} using \textbf{Vercel (frontend) \& Railway (backend)}, enabling deployment for every commit}
     \resumeItemListEnd
 
   \resumeSubheading
-    {The Special Character – Software Developer}{May 2025 -- July 2025}
-    {Offline}{}
+    {The Special Character – Software Developer Intern}{May 2024 -- July 2024}
+    {Offline -- {\href{}{\textcolor{blue}{\textbf{Project Demo}}} \textbf{--} \href{https://github.com/special-char/intern-booking-system-fe/}{\textcolor{blue}{\textbf{Source Code}}}\textbf{ --} \href{https://drive.usercontent.google.com/download?id=1csTmaZ8tiDpM3Hu2AWSK6s_hkxSCzK2W&authuser=0}{\textcolor{blue}{\textbf{Certificate}}}}}{}
     \resumeItemListStart
-      \resumeItem{Conceptualized and Designed Architecture for \textbf{SportsWalla, a BoxCricket or Venue booking platform}}
-\resumeItem{Learned how modern e-commerce sites are built using \textbf{Next.js} for dynamic frontend, \textbf{Medusa} for backend commerce logic, and \textbf{Payload CMS} for managing product and content data in a headless architecture}
-
-      \resumeItem{Developed admin dashboards, secure payment flows, and scalable backend infrastructure}
-    \resumeItemListEnd
-
+      \resumeItem{Designed Architecture for \textbf{SportsWalla, a BoxCricket/Venue Booking Platform} along with Calendar Integration}
+\resumeItem{Migrated a legacy e-commerce site to a modern stack using \textbf{Medusa} and \textbf{Payload CMS}, enabling easier product management and content updates; implemented for Brazilian brand \href{https://yogateria.com.br}{\textcolor{blue}{\textbf{Yogateria}}}, which receives 500+ new users daily}
 \resumeSubHeadingListEnd
 
+\vspace{-14pt}
+
 %-----------PROJECTS-----------
-\section{Projects}
+
+
+\section{\textbf{Projects}}
+\vspace{-10pt}
 \resumeSubHeadingListStart
+\resumeProjectHeading
+  {\textbf{Sudarshan} \textbar{} \textcolor{blue}{\href{https://www.youtube.com/watch?v=BXA8L5ZDczY}{\textbf{Project Demo}}} \textbar{} \textcolor{blue}{\href{https://github.com/4ryaS/sudarshan-sih-2024}{\textbf{Source Code}}}}
+  {JavaScript, MERN, Python, Blockchain, Tesseract OCR, DevO}
+\vspace{-8pt}
+\resumeItemListStart
+  \resumeItem{\textbf{SIH 2024 College Level Finalist}, AI-powered tamper-proof Aadhaar verification \& generation using Blockchain}
+  \resumeItem{Replaced manual, centralized storage \textbf{UIDAI workflows (serving over 1.3B citizens)} with a custom-built blockchain layer, enabling secure, decentralized Aadhaar verification with improved auditability, fault tolerance, and data integrity.}
+  \resumeItem{Built a multilingual Aadhaar OCR pipeline (Tesseract + EasyOCR) with image preprocessing (ROI cropping, thresholding), achieving \textbf{~78\% field-level accuracy} enabling extraction of Aadhaar card fields with fallback logic.}
+\resumeItem{Applied \href{https://en.wikipedia.org/wiki/Verhoeff_algorithm}{\textcolor{blue}{Verhoeff Algorithm}} to verify Aadhaar no. before pushing them to the custom-built MongoDB-based blockchain.}
+  % \resumeItem{Enabled generation of tamper-proof digital Aadhaar cards using verified blockchain data and stored images securely.}
+\resumeItemListEnd
+\vspace{-8pt}
 
-  \resumeProjectHeading
-  {\textbf{\href{https://github.com/4ryaS/sudarshan-sih-2024}{Sudarshan}} $|$ React.js, Node.js, Express.js, MongoDB, Python, Blockchain, IPFS}{}
-  \resumeItemListStart
-    \resumeItem{Blockchain-integrated Aadhaar verification with OCR (Optical Character Recognition), template matching, and Verhoeff algorithm}
-    \resumeItem{Built secure React.js portal to cross-verify Aadhaar data against blockchain entries}
-    \resumeItem{Integrated IPFS for decentralized image storage; used Python for backend verification logic}
-    \resumeItem{Shortlisted in Smart India Hackathon 2024 (college round)}
-  \resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{ParkEase} \textbar{} \textcolor{blue}{\href{https://park-ease0.vercel.app/}{\textbf{Project Demo}}} \textbar{} \textcolor{blue}{\href{https://github.com/dev-eloper-365/ParkEase}{\textbf{Source Code}}}}
+  {MERN, FASTAPI, Blockchain, OCR, DevOps}
+\vspace{-8pt}
+\resumeItemListStart
+  \resumeItem{Developed a real-time parking management system with license plate recognition, parking data \& vehicle-owner mapping}
+  \resumeItem{Designed \textbf{backend to support IoT camera-based} vehicle's entry/exit logging without actually deploying IoT camera.}
+  \resumeItem{Secured parking data via custom blockchain architecture (MongoDB), ensuring tamper-proof access and owner linkage.}
+  \resumeItem{\textbf{Proposed for funding} under Student Research Program for scalable deployment with future pay-per-use integration.}
+\resumeItemListEnd
+\vspace{-8pt}
 
-  \resumeProjectHeading
-  {\textbf{\href{https://github.com/dev-eloper-365/TripEase}{TripEase}} \textbar{}
-   \href{https://trip-ease-git-master-dev-eloper-365s-projects.vercel.app/}{Live Site} $|$ MERN, JWT, Groq API}{}
-  \resumeItemListStart
-    \resumeItem{Full-stack app for planning and managing travel itineraries}
-    \resumeItem{Secured 4th place in DAIICT TicTechToe Hackathon}
-    \resumeItem{Integrated Groq API for smart itinerary suggestions}
-  \resumeItemListEnd
-
-  \resumeProjectHeading
-  {\textbf{\href{https://github.com/dev-eloper-365/ParkEase}{ParkEase}} \textbar{}
-   \href{https://park-ease0.vercel.app/}{Live Site} $|$ MERN, JWT, Plate Recognition API}{}
-  \resumeItemListStart
-    \resumeItem{Built a smart parking system with real-time vehicle tracking and dashboards}
-    \resumeItem{Integrated AI-based License Plate Recognition for vehicle entry/exit automation}
-    \resumeItem{Designed role-based access and analytics with React.js and Chart.js}
-  \resumeItemListEnd
+\resumeProjectHeading
+  {\textbf{TripEase} \textbar{} \textcolor{blue}{\href{https://trip-ease-git-master-dev-eloper-365s-projects.vercel.app/}{\textbf{Project Demo}}} \textbar{} \textcolor{blue}{\href{https://github.com/dev-eloper-365/TripEase}{\textbf{Source Code}}}}
+  {MERN, JWT, Android, Groq API, DevOps}
+\vspace{-8pt}
+\resumeItemListStart
+  \resumeItem{\textbf{Secured 4\textsuperscript{th} rank} out of 60+ teams at DAIICT TicTacToe Hackathon for \textbf{TripEase}, an AI travel planner chatbot.}
+  \resumeItem{Integrated GrokAPI with JWT authentication, voice command support, calendar panel, and persistent chat logs, achieved response latency of \textbf{$<$250ms} under \textbf{5+ concurrent users} during real-time multi-device live deployment \& testing.}
+  \resumeItem{Outlined future integration of \textbf{Agentic AI} for autonomous bookings, ticket confirmations, and real-time modifications.}
+\resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
